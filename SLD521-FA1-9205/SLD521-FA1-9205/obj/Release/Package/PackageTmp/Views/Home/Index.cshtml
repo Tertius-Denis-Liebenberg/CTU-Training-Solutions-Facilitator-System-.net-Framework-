@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    <div>
+        @Html.Action("Index", "Students")
+    </div>
+
+}
+else
+{
+    <div>
+        @Html.Action("Register", "Account")
+    </div>
+}
